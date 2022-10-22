@@ -9,6 +9,7 @@ html {
 body {
   background-color: #d0b9d0;
   display: flex;
+  /* flex-wrap: wrap; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
