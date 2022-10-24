@@ -1,0 +1,139 @@
+/* at 700px */
+@media (max-width: 50em) {
+  .container {
+    width: 80rem;
+    height: 100%;
+    max-width: 100%;
+    max-height: 80vh;
+  }
+}
+
+/* at 544px */
+@media (max-width: 38em) {
+  .container {
+    display: none;
+  }
+
+  .query-container {
+    display: block;
+    background-color: #fff;
+    margin: 4rem 0rem;
+    border-radius: 1rem;
+    box-shadow: 0 14px 28px #63156352;
+    /* position: relative;
+    overflow: hidden; */
+    width: 80rem;
+    height: 100%;
+    max-width: 100%;
+    max-height: 70vh;
+    overflow-y: hidden;
+  }
+  input {
+    background: #efe8ef;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0.6rem 0;
+    width: 100%;
+    font-size: 1.4rem;
+  }
+  .sign-inpage {
+    background-color: #e0d0e0;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .forgot-password {
+    margin: 2rem 0 1rem 0;
+  }
+  .forgot-password a {
+    font-size: 1.4rem;
+  }
+  .create-link p {
+    font-size: 1.4rem;
+  }
+  .hello-friend {
+    background-color: #631563;
+    background: linear-gradient(to right, #631563, #684368) no-repeat 0 0 /
+      cover;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4rem;
+    text-align: center;
+    transform: translateY(0);
+    transition: all 1s ease-in-out;
+  }
+  .hello-friend p {
+    line-height: 2.4rem;
+  }
+  /* #hello-friend {
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+  } */
+  .create-account {
+    background-color: #e0d0e0;
+    display: flex;
+    flex-direction: column;
+    /* padding: 0 5rem; */
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+  }
+  .create-account p {
+    font-size: 1.4rem;
+  }
+
+  .welcome-page {
+    background-color: #631563;
+    background: linear-gradient(to right, #631563, #684368) no-repeat 0 0 /
+      cover;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.4rem;
+
+    padding: 0 2rem;
+  }
+  .welcome-page p {
+    line-height: 2.5rem;
+  }
+  .create-btn,
+  .log-btn {
+    background-color: #e0d0e0;
+    border: none;
+    font-size: 1.2rem;
+    padding: 1rem 0.5rem;
+    color: #851285;
+  }
+
+  .overlay-bottom {
+    transform: translateY(-100%);
+    transition: all 0.5s ease-in-out;
+  }
+  .overlay-bottom--signup {
+    transform: translateY(-200%);
+    transition: all 0.5s ease-in-out;
+  }
+  .overlay-bottom--welcome {
+    transition: all 0.5s ease-in-out;
+    transform: translateY(-300%);
+  }
+
+  .overlay-signin {
+    transform: translateY(100%);
+    transition: all 0.5s ease-in-out;
+  }
+}

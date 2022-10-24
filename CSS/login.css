@@ -5,16 +5,17 @@
 }
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 body {
   background-color: #d0b9d0;
   display: flex;
-  /* flex-wrap: wrap; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: -2rem 0 5rem;
+  padding: 0 2rem;
 }
 h1 {
   font-weight: 600;
@@ -37,6 +38,16 @@ a {
   text-decoration: none;
   margin: 1.5rem 0;
 }
+
+a:hover {
+  text-decoration: underline;
+}
+
+fieldset {
+  margin-top: 4rem;
+  border: none;
+}
+
 .container {
   background-color: #fff;
   margin: 5rem 0rem;
@@ -47,8 +58,9 @@ a {
   width: 80rem;
   height: 100%;
   max-width: 100%;
-  min-height: 48rem;
+  max-height: 100vh;
 }
+
 .form-container form {
   background-color: #e0d0e0;
   display: flex;
@@ -88,12 +100,16 @@ button {
   font-size: 1.4rem;
   font-weight: bold;
   padding: 1rem 5rem;
-  transition: transform 80ms ease-in;
+  transition: all 0.3s ease-in-out;
   cursor: pointer;
   margin-top: 1rem;
 }
+button:hover {
+  transform: scale(1.05);
+}
+
 button:active {
-  transform: scale(1.01);
+  transform: translateY(2px);
 }
 button:focus {
   outline: none;
@@ -102,6 +118,7 @@ button.ghost {
   background: #684368;
   border-color: antiquewhite;
 }
+
 .form-container {
   position: absolute;
   top: 0;
@@ -193,4 +210,9 @@ button.ghost {
 
 .container.right-panel-active .overlay-right {
   transform: translateX(20%);
+}
+
+/* /queries */
+.query-container {
+  display: none;
 }

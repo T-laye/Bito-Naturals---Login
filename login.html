@@ -6,52 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign in | Sign up</title>
     <link rel="stylesheet" href="./CSS/login.css" />
+    <link rel="stylesheet" href="./CSS/query.css" />
   </head>
   <body>
     <div class="container" id="container">
       <div class="form-container sign-up-container">
         <form id="sign-up" action="#">
           <h1>Create Account</h1>
-          <div class="icon-container">
-            <a href="#" class="icon"
-              ><ion-icon name="logo-facebook"></ion-icon
-            ></a>
-            <a href="#" class="icon"
-              ><ion-icon name="logo-whatsapp"></ion-icon
-            ></a>
-            <a href="#" id="google" class="icon"
-              ><ion-icon name="logo-google"></ion-icon
-            ></a>
-            <a href="#" class="icon"
-              ><ion-icon name="logo-instagram"></ion-icon
-            ></a>
-          </div>
-          <span>or use your email for registration</span>
-          <input type="text" id="userName" placeholder="Name" />
-          <input type="email" id="email" placeholder="Email" />
-          <input type="password" id="password" placeholder="Password" />
+          <fieldset>
+            <input type="text" id="userName" placeholder="Name" />
+            <input type="email" id="email" placeholder="Email" />
+            <input type="password" id="password" placeholder="Password" />
+          </fieldset>
           <button type="submit" id="sign_up">Sign Up</button>
         </form>
       </div>
 
       <!-- /////form2 -->
-      <div class="form-container sign-in-container">
-        <form action="../Bito Dash Board/dashboard.html" target="_blank">
+      <div class="form-container sign-in-container form-containerquery">
+        <form action="./catalogue.html">
           <h1>Sign in</h1>
-          <div class="icon-container">
-            <a href="#" class="icon"
-              ><ion-icon name="logo-facebook"></ion-icon
-            ></a>
-            <a href="#" class="icon"
-              ><ion-icon name="logo-google"></ion-icon
-            ></a>
-            <a href="#" class="icon"
-              ><ion-icon name="logo-instagram"></ion-icon
-            ></a>
-          </div>
-          <span>or use your account</span>
-          <input required type="email" placeholder="Email" />
-          <input required type="password" placeholder="Password" />
+          <fieldset>
+            <input required type="email" placeholder="Email" />
+            <input required type="password" placeholder="Password" />
+          </fieldset>
           <a href="#">Forgot your password?</a>
 
           <button id="sign_in">Sign In</button>
@@ -77,11 +55,63 @@
       </div>
     </div>
 
-    <!-- <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-storage.js"></script> -->
+    <section class="query-container">
+      <div class="sign-inpage">
+        <form action="./catalogue.html">
+          <h1>Sign in</h1>
+          <fieldset>
+            <input required type="email" placeholder="Email" />
+            <input required type="password" placeholder="Password" />
+          </fieldset>
+
+          <button id="sign_in">Sign In</button>
+        </form>
+
+        <div class="forgot-password">
+          <a href="#">Forgot your password?</a>
+        </div>
+
+        <div class="create-link">
+          <p>
+            Not registered yet?
+
+            <button class="create-btn">Create account</button>
+            <!-- <a href="#hello-friend">Create account</a> -->
+          </p>
+        </div>
+      </div>
+
+      <div class="hello-friend" id="hello-friend">
+        <h1>Hello, Friend!</h1>
+        <p>Enter your personal details and start journey with us</p>
+        <button class="ghost mobile-sign-up" id="signUp">Sign Up</button>
+      </div>
+
+      <div class="create-account">
+        <form id="sign-up" action="#">
+          <h1>Create Account</h1>
+          <fieldset>
+            <input type="text" id="userName" placeholder="Name" />
+            <input type="email" id="email" placeholder="Email" />
+            <input type="password" id="password" placeholder="Password" />
+          </fieldset>
+          <button type="submit " class="mobile-sign-up-submit" id="sign_up">
+            Sign Up
+          </button>
+          <p>
+            Registered already?
+            <button class="log-btn">Log In</button>
+          </p>
+          <!-- <a href="#hello-friend">Create account</a> -->
+        </form>
+      </div>
+
+      <div class="welcome-page">
+        <h1>Welcome Back!</h1>
+        <p>To keep connected with us please login with your personal info</p>
+        <button class="ghost welcome-btn" id="signIn">Sign In</button>
+      </div>
+    </section>
 
     <script
       type="module"
