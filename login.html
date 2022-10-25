@@ -13,26 +13,48 @@
       <div class="form-container sign-up-container">
         <form id="sign-up" action="#">
           <h1>Create Account</h1>
+          <div class="profile-pic-div">
+            <img id="photo" src="./profile pic default.png" alt="profile-pic" />
+            <input id="file" type="file" />
+            <label for="file" id="uploadBtn">Upload Photo</label>
+          </div>
           <fieldset>
             <input type="text" id="userName" placeholder="Name" />
             <input type="email" id="email" placeholder="Email" />
             <input type="password" id="password" placeholder="Password" />
+            <input
+              class="editProfile"
+              required
+              placeholder="Phone Number"
+              type="tel"
+              id="tel"
+            />
           </fieldset>
-          <button type="submit" id="sign_up">Sign Up</button>
+          <button type="submit" class="sign_up" id="sign_up">Sign Up</button>
         </form>
       </div>
 
       <!-- /////form2 -->
       <div class="form-container sign-in-container form-containerquery">
-        <form action="./catalogue.html">
+        <form action="">
           <h1>Sign in</h1>
           <fieldset>
-            <input required type="email" placeholder="Email" />
-            <input required type="password" placeholder="Password" />
+            <input
+              required
+              class="signInEmail"
+              type="email"
+              placeholder="Email"
+            />
+            <input
+              required
+              class="signInPassword"
+              type="password"
+              placeholder="Password"
+            />
           </fieldset>
-          <a href="#">Forgot your password?</a>
+          <a href="#">forgot your password?</a>
 
-          <button id="sign_in">Sign In</button>
+          <button class="sign_in" id="sign_in">Sign In</button>
         </form>
       </div>
       <!-- //////////// -->
@@ -55,20 +77,32 @@
       </div>
     </div>
 
+    <!-- query responsive -->
+
     <section class="query-container">
       <div class="sign-inpage">
-        <form action="./catalogue.html">
+        <form action="">
           <h1>Sign in</h1>
           <fieldset>
-            <input required type="email" placeholder="Email" />
-            <input required type="password" placeholder="Password" />
+            <input
+              required
+              class="signInEmail"
+              type="email"
+              placeholder="Email"
+            />
+            <input
+              required
+              class="signInPassword"
+              type="password"
+              placeholder="Password"
+            />
           </fieldset>
 
-          <button id="sign_in">Sign In</button>
+          <button class="sign_in">Sign In</button>
         </form>
 
         <div class="forgot-password">
-          <a href="#">Forgot your password?</a>
+          <a href="#">forgot your password?</a>
         </div>
 
         <div class="create-link">
@@ -81,21 +115,32 @@
         </div>
       </div>
 
-      <div class="hello-friend" id="hello-friend">
+      <div class="hello-friend">
         <h1>Hello, Friend!</h1>
         <p>Enter your personal details and start journey with us</p>
-        <button class="ghost mobile-sign-up" id="signUp">Sign Up</button>
+        <button class="ghost mobile-sign-up">Sign Up</button>
       </div>
 
-      <div class="create-account">
-        <form id="sign-up" action="#">
+      <div class="create-account two">
+        <form action="#">
           <h1>Create Account</h1>
+          <div class="profile-pic-div">
+            <img id="photo" src="./profile pic default.png" alt="profile-pic" />
+            <input id="file" type="file" />
+            <label for="file" id="uploadBtn">Upload Photo</label>
+          </div>
           <fieldset>
             <input type="text" id="userName" placeholder="Name" />
             <input type="email" id="email" placeholder="Email" />
             <input type="password" id="password" placeholder="Password" />
+            <input
+              class="editProfile"
+              required
+              placeholder="Phone Number"
+              type="tel"
+            />
           </fieldset>
-          <button type="submit " class="mobile-sign-up-submit" id="sign_up">
+          <button type="submit " class="mobile-sign-up-submit sign_up">
             Sign Up
           </button>
           <p>
@@ -109,7 +154,7 @@
       <div class="welcome-page">
         <h1>Welcome Back!</h1>
         <p>To keep connected with us please login with your personal info</p>
-        <button class="ghost welcome-btn" id="signIn">Sign In</button>
+        <button class="ghost welcome-btn">Sign In</button>
       </div>
     </section>
 

@@ -54,3 +54,39 @@ welcomeBtn.addEventListener("click", function () {
   createForm.classList.remove("overlay-bottom--signup");
   // welcomePage.classList.add("overlay-signin");
 });
+
+////////////////////////////////////////////////
+/////////Profile pic Upload
+const imgDiv = document.querySelector(".profile-pic-div");
+const img = document.querySelector("#photo");
+const file = document.querySelector("#file");
+const uploadBtn = document.querySelector("#uploadBtn");
+const dispImg = document.querySelector("#profile-display-image");
+const miniProImg = document.querySelector("#miniImg");
+
+// hover effect
+imgDiv.addEventListener("mouseenter", function () {
+  uploadBtn.style.display = "block";
+});
+
+imgDiv.addEventListener("mouseleave", function () {
+  uploadBtn.style.display = "none";
+});
+
+//Image showing functionality
+file.addEventListener("change", function () {
+  const chooseFile = this.files[0];
+
+  if (chooseFile) {
+    const reader = new FileReader();
+
+    reader.addEventListener("load", function (e) {
+      e.preventDefault();
+      img.setAttribute("src", reader.result);
+      miniProImg.setAttribute("src", reader.result);
+      dispImg.setAttribute("src", reader.result);
+    });
+
+    reader.readAsDataURL(chooseFile);
+  }
+});

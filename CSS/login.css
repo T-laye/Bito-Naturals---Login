@@ -44,7 +44,7 @@ a:hover {
 }
 
 fieldset {
-  margin-top: 4rem;
+  margin-top: 1rem;
   border: none;
 }
 
@@ -214,5 +214,43 @@ button.ghost {
 
 /* /queries */
 .query-container {
+  display: none;
+}
+
+/* Profile pic upload */
+.profile-pic-div {
+  height: 10rem;
+  width: 10rem;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid grey;
+  background-color: #bbb;
+  align-self: center;
+  margin-top: 2rem;
+}
+
+#photo {
+  height: 100%;
+  width: 100%;
+}
+
+#file {
+  display: none;
+}
+
+#uploadBtn {
+  height: 4rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  background: rgb(0, 0, 0, 0.7);
+  color: #bbb;
+  line-height: 30px;
+  font-size: 1.8rem;
+  cursor: pointer;
   display: none;
 }
