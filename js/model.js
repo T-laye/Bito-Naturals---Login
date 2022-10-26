@@ -16,6 +16,12 @@ import {
   collection,
   addDoc,
 } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore.js";
+import {
+  getStorage,
+  ref,
+  uploadBytes,
+  getDownloadURL,
+} from "https://www.gstatic.com/firebasejs/9.12.1/firebase-storage.js";
 // import { firestore } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -44,26 +50,36 @@ const signUpBtns = Array.from(signUpButton);
 const signInButton = document.getElementsByClassName("sign_in");
 const signInBtns = Array.from(signInButton);
 
+// console.log(photo);
+const fileInput = document.getElementById("file");
+const file = fileInput.files[0];
+console.log(file);
+fileInput.addEventListener("change", function (e) {
+  const photo = document.getElementById("photo");
+  console.log(e.target.files[0]);
+  console.log(photo.src);
+});
 signUpBtns.forEach((btn) => {
   btn.addEventListener("click", function (e) {
     e.preventDefault();
     const userName = document.getElementById("userName").value;
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
-    const phone = document.getElementById("tel").value;
 
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
         // user.displayName = userName.value;
+        const userId = userCredential.user.uid;
         updateProfile(auth.currentUser, {
           displayName: userName,
-          phoneNumber: +phone,
           // photoURL: "https://example.com/jane-q-user/profile.jpg",
         })
           .then(() => {
             alert("Successful Registration, please Sign In");
+            console.log(user);
+            window.open("http://127.0.0.1:5500/Bito%20Login/login.html");
             // ...
 
             try {
@@ -71,8 +87,24 @@ signUpBtns.forEach((btn) => {
                 username: userName,
                 email: email,
                 password: password,
-                phoneNumber: phone,
+                // phoneNumber: phone,
               });
+              const fileInput = document.getElementById("file");
+              const storage = getStorage(app);
+
+              // fileInput.addEventListener("change", function (e) {
+              const file = fileInput.files[0];
+              console.log(file + "hi");
+              const storageRef = ref(storage, `profile-pic/${userId}`);
+              uploadBytes(storageRef, file)
+                .then((snapshot) => {
+                  // alert("Uploaded a blob or file!");
+                  console.log();
+                })
+                .catch((e) => {
+                  alert(e);
+                });
+              // });
             } catch (e) {
               console.error("Error adding document: ", e);
             }
@@ -111,7 +143,7 @@ signInBtns.forEach((btn) => {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        alert(errorCode);
+        alert(errorMessage);
       });
   });
 });

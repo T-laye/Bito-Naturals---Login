@@ -83,8 +83,8 @@ file.addEventListener("change", function () {
     reader.addEventListener("load", function (e) {
       e.preventDefault();
       img.setAttribute("src", reader.result);
-      miniProImg.setAttribute("src", reader.result);
-      dispImg.setAttribute("src", reader.result);
+      // miniProImg.setAttribute("src", reader.result);
+      // dispImg.setAttribute("src", reader.result);
     });
 
     reader.readAsDataURL(chooseFile);
