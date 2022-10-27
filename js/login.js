@@ -93,7 +93,7 @@ file.addEventListener("change", function () {
 
 ////////////////////////////////////////////////
 /////////Profile pic Upload 2222222
-const imgDiv2 = document.querySelector("#profile-pic-div");
+const imgDiv2 = document.querySelector(".profile-pic-div");
 
 const img2 = document.querySelector(".photo");
 const file2 = document.querySelector(".file");
