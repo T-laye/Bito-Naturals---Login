@@ -30,7 +30,7 @@ signInButton.addEventListener("click", function () {
 // console.log(form);
 
 createBtn.addEventListener("click", function () {
-  console.log("clicked");
+  // console.log("clicked");
 
   signContainer.classList.add("overlay-top");
   helloFriend.classList.add("overlay-bottom");
@@ -42,7 +42,7 @@ mobileSignUp.addEventListener("click", function () {
 });
 
 logBtn.addEventListener("click", function () {
-  console.log("gerroutttttt");
+  // console.log("gerroutttttt");
   welcomePage.classList.add("overlay-bottom--welcome");
 });
 
@@ -83,6 +83,43 @@ file.addEventListener("change", function () {
     reader.addEventListener("load", function (e) {
       e.preventDefault();
       img.setAttribute("src", reader.result);
+      // miniProImg.setAttribute("src", reader.result);
+      // dispImg.setAttribute("src", reader.result);
+    });
+
+    reader.readAsDataURL(chooseFile);
+  }
+});
+
+////////////////////////////////////////////////
+/////////Profile pic Upload 2222222
+const imgDiv2 = document.querySelector("#profile-pic-div");
+
+const img2 = document.querySelector(".photo");
+const file2 = document.querySelector(".file");
+const uploadBtn2 = document.querySelector(".uploadBtn");
+// const dispImg2 = document.querySelector("#profile-display-image");
+// const miniProImg2 = document.querySelector("#miniImg");
+
+// hover effect
+imgDiv2.addEventListener("mouseenter", function () {
+  uploadBtn2.style.display = "block";
+});
+
+imgDiv2.addEventListener("mouseleave", function () {
+  uploadBtn2.style.display = "none";
+});
+
+//Image showing functionality
+file.addEventListener("change", function () {
+  const chooseFile = this.files[0];
+
+  if (chooseFile) {
+    const reader = new FileReader();
+
+    reader.addEventListener("load", function (e) {
+      e.preventDefault();
+      img2.setAttribute("src", reader.result);
       // miniProImg.setAttribute("src", reader.result);
       // dispImg.setAttribute("src", reader.result);
     });

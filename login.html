@@ -38,15 +38,10 @@
         <form action="">
           <h1>Sign in</h1>
           <fieldset>
+            <input required id="signInEmail" type="email" placeholder="Email" />
             <input
               required
-              class="signInEmail"
-              type="email"
-              placeholder="Email"
-            />
-            <input
-              required
-              class="signInPassword"
+              id="signInPassword"
               type="password"
               placeholder="Password"
             />
@@ -123,15 +118,19 @@
       <div class="create-account two">
         <form action="#">
           <h1>Create Account</h1>
-          <div class="profile-pic-div">
-            <img id="photo" src="./profile pic default.png" alt="profile-pic" />
+          <div id="profile-pic-div">
+            <img
+              class="photo"
+              src="./profile pic default.png"
+              alt="profile-pic"
+            />
             <input class="file" type="file" />
-            <label for="file" id="uploadBtn">Upload Photo</label>
+            <label for="file" class="uploadBtn">Upload Photo</label>
           </div>
           <fieldset>
-            <input type="text" id="userName" placeholder="Name" />
-            <input type="email" id="email" placeholder="Email" />
-            <input type="password" id="password" placeholder="Password" />
+            <input type="text" class="userName" placeholder="Name" />
+            <input type="email" class="email" placeholder="Email" />
+            <input type="password" class="password" placeholder="Password" />
             <input
               class="editProfile"
               required

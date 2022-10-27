@@ -218,9 +218,10 @@ button.ghost {
 }
 
 /* Profile pic upload */
-.profile-pic-div {
-  height: 10rem;
-  width: 10rem;
+.profile-pic-div,
+#profile-pic-div {
+  height: 5rem;
+  width: 5rem;
   position: relative;
   border-radius: 50%;
   overflow: hidden;
@@ -228,29 +229,33 @@ button.ghost {
   background-color: #bbb;
   align-self: center;
   margin-top: 2rem;
+  margin: auto;
 }
 
-#photo {
+#photo,
+.photo {
   height: 100%;
   width: 100%;
 }
 
-#file {
+#file,
+.file {
   display: none;
 }
 
-#uploadBtn {
-  height: 4rem;
+#uploadBtn,
+.uploadBtn {
+  height: 2rem;
   width: 100%;
   position: absolute;
-  bottom: 0;
+  bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
   background: rgb(0, 0, 0, 0.7);
   color: #bbb;
   line-height: 30px;
-  font-size: 1.8rem;
+  font-size: 1rem;
   cursor: pointer;
   display: none;
 }
