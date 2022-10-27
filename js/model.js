@@ -53,13 +53,13 @@ const signInBtns = Array.from(signInButton);
 // console.log(photo);
 const fileInput = document.getElementById("file");
 const file = fileInput.files[0];
-console.log(file);
+// console.log(fileInput);
+// console.log(file);
 fileInput.addEventListener("change", function (e) {
   const photo = document.getElementById("photo");
-  console.log(e.target.files[0]);
-  console.log(photo.src);
+  // console.log(e.target.files[0]);
+  // console.log(photo.src);
 });
-
 signUpBtns.forEach((btn) => {
   btn.addEventListener("click", function (e) {
     e.preventDefault();
@@ -73,7 +73,6 @@ signUpBtns.forEach((btn) => {
         const user = userCredential.user;
         // user.displayName = userName.value;
         const userId = userCredential.user.uid;
-
         updateProfile(auth.currentUser, {
           displayName: userName,
           // photoURL: "https://example.com/jane-q-user/profile.jpg",
@@ -128,16 +127,13 @@ signUpBtns.forEach((btn) => {
   });
 });
 
-const email = document.getElementById("signInEmail").value;
-// console.log(email);
-const password = document.getElementById("signInPassword").value;
-
 signInBtns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     e.preventDefault();
     console.log(btn);
+    const email = document.querySelector(".signInEmail").value;
+    const password = document.querySelector(".signInPassword").value;
 
-    console.log(email);
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
@@ -148,102 +144,7 @@ signInBtns.forEach((btn) => {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        // alert(errorMessage);
-      });
-  });
-});
-
-///////////////////////////////////////////////////////
-//Query form
-signUpBtns.forEach((btn) => {
-  btn.addEventListener("click", function (e) {
-    e.preventDefault();
-    const userName2 = document.querySelector(".userName").value;
-    const email2 = document.querySelector(".email").value;
-    const password2 = document.querySelector(".password").value;
-
-    createUserWithEmailAndPassword(auth, email2, password2)
-      .then((userCredential) => {
-        // Signed in
-        const user = userCredential.user;
-        // user.displayName = userName.value;
-        const userId = userCredential.user.uid;
-
-        updateProfile(auth.currentUser, {
-          displayName: userName2,
-          // photoURL: "https://example.com/jane-q-user/profile.jpg",
-        })
-          .then(() => {
-            alert("Successful Registration, please Sign In");
-            console.log(user);
-            window.open("http://127.0.0.1:5500/Bito%20Login/login.html");
-            // ...
-
-            try {
-              const docRef = addDoc(collection(db, "users"), {
-                username: userName2,
-                email: email2,
-                password: password2,
-                // phoneNumber: phone,
-              });
-              const fileInput = document.getElementById("file");
-              const storage = getStorage(app);
-
-              // fileInput.addEventListener("change", function (e) {
-              const file = fileInput.files[0];
-              console.log(file + "hi");
-              const storageRef = ref(storage, `profile-pic/${userId}`);
-              uploadBytes(storageRef, file)
-                .then((snapshot) => {
-                  // alert("Uploaded a blob or file!");
-                  console.log();
-                })
-                .catch((e) => {
-                  alert(e);
-                });
-              // });
-            } catch (e) {
-              console.error("Error adding document: ", e);
-            }
-          })
-          .catch((error) => {
-            // An error occurred
-            // ...
-          });
-
-        // ...
-        console.log(user);
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // ..
-        console.log(errorMessage, errorCode);
-      });
-  });
-});
-
-const email2 = document.querySelector(".signInEmail").value;
-// console.log(email);
-const password2 = document.querySelector(".signInPassword").value;
-
-signInBtns.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    e.preventDefault();
-    console.log(btn);
-
-    console.log(email);
-    signInWithEmailAndPassword(auth, email2, password2)
-      .then((userCredential) => {
-        // Signed in
-        const user = userCredential.user;
-        window.open("http://127.0.0.1:5500/Bito%20Dash%20Board/dashboard.html");
-        // ...
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // alert(errorMessage);
+        alert(errorMessage);
       });
   });
 });

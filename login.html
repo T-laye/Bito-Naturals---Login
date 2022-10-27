@@ -7,13 +7,20 @@
     <title>Sign in | Sign up</title>
     <link rel="stylesheet" href="./CSS/login.css" />
     <link rel="stylesheet" href="./CSS/query.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Noto+Sans+Display:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Rubik:wght@400;500;600;700&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <h1 id="company_name">Bito Naturals</h1>
     <div class="container" id="container">
       <div class="form-container sign-up-container">
         <form id="sign-up" action="#">
           <h1>Create Account</h1>
-          <div id="profile-pic-div">
+          <div class="profile-pic-div">
             <img id="photo" src="./profile pic default.png" alt="profile-pic" />
             <input id="file" type="file" />
             <label for="file" id="uploadBtn">Upload Photo</label>
@@ -22,14 +29,9 @@
             <input type="text" id="userName" placeholder="Name" />
             <input type="email" id="email" placeholder="Email" />
             <input type="password" id="password" placeholder="Password" />
-            <input
-              class="editProfile tel"
-              required
-              placeholder="Phone Number"
-              type="tel"
-            />
           </fieldset>
           <button type="submit" class="sign_up" id="sign_up">Sign Up</button>
+          <a class="switch" id="sign-in-btn">Sign In</a>
         </form>
       </div>
 
@@ -38,17 +40,17 @@
         <form action="">
           <h1>Sign in</h1>
           <fieldset>
-            <input required id="signInEmail" type="email" placeholder="Email" />
+            <input class="signInEmail" type="email" placeholder="Email" />
             <input
-              required
-              id="signInPassword"
+              class="signInPassword"
               type="password"
               placeholder="Password"
             />
           </fieldset>
-          <a href="#">forgot your password?</a>
+          <a href="#" class="forgotPass">forgot your password?</a>
 
           <button class="sign_in" id="sign_in">Sign In</button>
+          <a class="switch" id="sign-up-btn">Sign Up</a>
         </form>
       </div>
       <!-- //////////// -->
@@ -73,20 +75,15 @@
 
     <!-- query responsive -->
 
-    <section id="query-container">
+    <section class="query-container">
       <div class="sign-inpage">
         <form action="">
           <h1>Sign in</h1>
           <fieldset>
+            <input required id="signInEmail" type="email" placeholder="Email" />
             <input
               required
-              class="signInEmail"
-              type="email"
-              placeholder="Email"
-            />
-            <input
-              required
-              class="signInPassword"
+              id="signInPassword"
               type="password"
               placeholder="Password"
             />
@@ -117,20 +114,21 @@
 
       <div class="create-account two">
         <form action="#">
-          <h1>Create Account</h1>
-          <div class="profile-pic-div">
+          <div class="profile-pic-div2">
             <img
-              class="photo"
+              id="photo2"
               src="./profile pic default.png"
               alt="profile-pic"
             />
-            <input class="file" type="file" />
-            <label for="file" class="uploadBtn">Upload Photo</label>
+            <input id="file2" type="file" />
           </div>
+          <label for="file2" id="uploadBtn22">Upload Photo</label>
+          <h1>Create Account</h1>
+
           <fieldset>
-            <input type="text" class="userName" placeholder="Name" />
-            <input type="email" class="email" placeholder="Email" />
-            <input type="password" class="password" placeholder="Password" />
+            <input type="text" id="userName2" placeholder="Name" />
+            <input type="email" id="email2" placeholder="Email" />
+            <input type="password" id="password2" placeholder="Password" />
             <input
               class="editProfile"
               required

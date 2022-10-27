@@ -16,6 +16,7 @@ body {
   height: 100vh;
   margin: -2rem 0 5rem;
   padding: 0 2rem;
+  font-family: "Montserrat", sans-serif;
 }
 h1 {
   font-weight: 600;
@@ -23,7 +24,7 @@ h1 {
   margin: 0;
 }
 p {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 100;
   line-height: 2rem;
   letter-spacing: 0.5px;
@@ -48,9 +49,15 @@ fieldset {
   border: none;
 }
 
+#company_name {
+  font-size: 5.4rem;
+  margin-top: 5%;
+  color: #631563;
+}
+
 .container {
   background-color: #fff;
-  margin: 5rem 0rem;
+  margin: 3rem 0rem;
   border-radius: 1rem;
   box-shadow: 0 14px 28px #63156352;
   position: relative;
@@ -65,26 +72,13 @@ fieldset {
   background-color: #e0d0e0;
   display: flex;
   flex-direction: column;
-  padding: 0 5rem;
+  padding: 0 2rem;
   height: 100%;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-.icon-container {
-  margin: 2rem 0;
-}
-.icon-container a {
-  background-color: #efe8ef;
-  border: 1px solid #efe8ef;
-  border-radius: 50%;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  height: 4rem;
-  width: 4rem;
-  margin: 0 0.5rem;
-}
+
 .form-container input {
   background: #efe8ef;
   border: none;
@@ -103,6 +97,7 @@ button {
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   margin-top: 1rem;
+  white-space: nowrap;
 }
 button:hover {
   transform: scale(1.05);
@@ -138,6 +133,7 @@ button.ghost {
 }
 .overlay-container {
   position: absolute;
+  /* display: none; */
   top: 0;
   left: 50%;
   width: 50%;
@@ -212,13 +208,13 @@ button.ghost {
   transform: translateX(20%);
 }
 
-/* /queries */
+/* queries */
 .query-container {
   display: none;
 }
 
 /* Profile pic upload */
-#profile-pic-div {
+.profile-pic-div {
   height: 10rem;
   width: 10rem;
   position: relative;
@@ -228,6 +224,7 @@ button.ghost {
   background-color: #bbb;
   align-self: center;
   margin-top: 2rem;
+  /* display: none; */
 }
 
 #photo {
@@ -253,4 +250,12 @@ button.ghost {
   font-size: 1.8rem;
   cursor: pointer;
   display: none;
+}
+
+form .switch {
+  display: none;
+}
+
+.form-container .forgotPass {
+  font-size: 1.6rem;
 }
