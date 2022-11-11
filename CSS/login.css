@@ -49,15 +49,23 @@ fieldset {
   border: none;
 }
 
-#company_name {
+/* #company_name {
   font-size: 5.4rem;
-  margin-top: 5%;
   color: #631563;
+} */
+
+.logo-container {
+  margin-top: 2%;
+  width: 15rem;
+}
+
+.logo {
+  width: 100%;
 }
 
 .container {
   background-color: #fff;
-  margin: 3rem 0rem;
+  margin: 1rem 0rem 3rem;
   border-radius: 1rem;
   box-shadow: 0 14px 28px #63156352;
   position: relative;

@@ -95,7 +95,7 @@ signUpBtns.forEach((btn) => {
 
               // fileInput.addEventListener("change", function (e) {
               const file = fileInput.files[0];
-              console.log(file + "hi");
+              // console.log(file + "hi");
               const storageRef = ref(storage, `profile-pic/${userId}`);
               uploadBytes(storageRef, file)
                 .then((snapshot) => {
@@ -111,8 +111,7 @@ signUpBtns.forEach((btn) => {
             }
           })
           .catch((error) => {
-            // An error occurred
-            // ...
+            // alert(error);
           });
 
         // ...
@@ -122,7 +121,7 @@ signUpBtns.forEach((btn) => {
         const errorCode = error.code;
         const errorMessage = error.message;
         // ..
-        console.log(errorMessage, errorCode);
+        alert(errorMessage);
       });
   });
 });
