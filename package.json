@@ -1,0 +1,31 @@
+{
+  "name": "bito-login",
+  "version": "1.0.0",
+  "description": "Login page for bitos",
+  "default": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/T-laye/Bito-Naturals---Login.git"
+  },
+  "author": "Jane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/T-laye/Bito-Naturals---Login/issues"
+  },
+  "homepage": "https://github.com/T-laye/Bito-Naturals---Login#readme",
+  "devDependencies": {
+    "autoprefixer-core": "^6.0.1",
+    "csswring": "^7.0.0",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "firebase": "^9.15.0",
+    "parcel": "^2.8.2"
+  }
+}

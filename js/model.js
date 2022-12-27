@@ -1,8 +1,8 @@
 "use strict";
 
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-analytics.js";
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 import {
   getAuth,
   // connectAuthEmulator,
@@ -10,18 +10,9 @@ import {
   signInWithEmailAndPassword,
   onAuthStateChanged,
   updateProfile,
-} from "https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js";
-import {
-  getFirestore,
-  collection,
-  addDoc,
-} from "https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore.js";
-import {
-  getStorage,
-  ref,
-  uploadBytes,
-  getDownloadURL,
-} from "https://www.gstatic.com/firebasejs/9.12.1/firebase-storage.js";
+} from "firebase/auth";
+import { getFirestore, collection, addDoc } from "firebase/firestore/lite";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 // import { firestore } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -80,7 +71,7 @@ signUpBtns.forEach((btn) => {
           .then(() => {
             alert("Successful Registration, please Sign In");
             console.log(user);
-            window.open("http://127.0.0.1:5500/Bito%20Login/login.html");
+            window.open("./index.html");
             // ...
 
             try {
@@ -137,7 +128,7 @@ signInBtns.forEach((btn) => {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-        window.open("http://127.0.0.1:5500/Bito%20Dash%20Board/dashboard.html");
+        window.open("./dashboard.html");
         // ...
       })
       .catch((error) => {
